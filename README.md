@@ -30,6 +30,11 @@
 ---
 
 > **Personal fork note:** I'm using this for learning purposes — mainly exploring the backtesting pipeline and the weight-centric architecture. Upstream repo: [AI4Finance-Foundation/FinRL-Trading](https://github.com/AI4Finance-Foundation/FinRL-Trading).
+>
+> **My focus areas:**
+> - Understanding how portfolio weight vectors flow through the execution pipeline
+> - Experimenting with custom data sources (Yahoo Finance + Alpaca)
+> - Notes/findings tracked in [`NOTES.md`](./NOTES.md)
 
 ## About
 
@@ -41,6 +46,4 @@ Introduced in our paper *"FinRL-X: An AI-Native Modular Infrastructure for Quant
 
 At its core is a **weight-centric architecture** — the target portfolio weight vector is the sole interface contract between strategy logic and downstream execution:
 
-$$w_t = \mathcal{R}_t\bigl(\mathcal{T}_t\bigl(\mathcal{A}_t\bigl(\mathcal{S}_t(\mathcal{X}_{\le t})\bigr)\bigr)\bigr)$$
-
-where $\mathcal{S}$ denotes stock selection, $\mathcal{A}$ portfolio allocation, $\mathcal{T}$ timing adjustment, and $\mathcal{R}$ portfolio-level risk overlay. Each transformation is contract-preserving — you can swap any mod
+$$w_t = \mathcal{R}_t\bigl(\mathcal{T}_t\bigl(\mathcal{A}_t\bigl(\mathcal{S}_t(\mathcal{X}_{\
