@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     curl \
     sqlite3 \
+    git \
     && rm -rf /var/lib/apt/lists/*
 
 # Create app directory
@@ -48,4 +49,5 @@ HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
 EXPOSE 8501
 
 # Default command - use the main CLI
-CMD ["python", "src/main.py", "dashboard"]
+# Note: changed default to backtest mode for my personal workflow
+CMD ["python", "src/main.py", "backtest"]
