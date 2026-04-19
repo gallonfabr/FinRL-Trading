@@ -35,6 +35,8 @@
 > - Understanding how portfolio weight vectors flow through the execution pipeline
 > - Experimenting with custom data sources (Yahoo Finance + Alpaca)
 > - Notes/findings tracked in [`NOTES.md`](./NOTES.md)
+>
+> **Local setup reminder:** activate venv with `source .venv/bin/activate` before running any scripts; `.env` holds Alpaca paper-trading keys (not committed).
 
 ## About
 
@@ -44,6 +46,4 @@ Introduced in our paper *"FinRL-X: An AI-Native Modular Infrastructure for Quant
 
 > FinRL-X is **not just a library** — it is a full-stack trading platform engineered around modularity, reproducibility, and production-readiness, supporting everything from ML-based stock selection and professional backtesting to live brokerage execution.
 
-At its core is a **weight-centric architecture** — the target portfolio weight vector is the sole interface contract between strategy logic and downstream execution:
-
-$$w_t = \mathcal{R}_t\bigl(\mathcal{T}_t\bigl(\mathcal{A}_t\bigl(\mathcal{S}_t(\mathcal{X}_{\
+At its core is a **weight-cent
