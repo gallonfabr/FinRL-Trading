@@ -6,6 +6,7 @@ for production-grade algorithmic trading using deep RL agents.
 Personal fork notes:
 - Using this to experiment with PPO/SAC agents on crypto data
 - See notebooks/ for my custom backtesting experiments
+- Primarily testing on BTC/ETH pairs via Binance data
 """
 
 __version__ = "0.1.0"
