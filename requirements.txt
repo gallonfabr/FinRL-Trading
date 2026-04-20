@@ -18,7 +18,7 @@ ta>=0.10.2
 
 # Reinforcement learning
 stable-baselines3>=2.1.0
-gym>=0.26.0
+# Note: gym is legacy; using gymnasium as primary env
 gymnasium>=0.29.0
 
 # Visualization
