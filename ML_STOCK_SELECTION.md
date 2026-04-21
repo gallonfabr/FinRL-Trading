@@ -63,8 +63,4 @@ datadate    tradedate    trade_price    y_return = ln(next/this)
 | y_return = 0 | Frozen price from delisted ticker whose adj_close_q was never updated | Set to NULL |
 | y_return computed across a stock split without split-adjusted prices | Raw close prices make the return look like -50% or +100% when it's actually ~0 | Always use `adjClose`, not `close` |
 
-> **Personal note:** I got burned by the `adj_close_q` mistake on my first run — the model looked great in backtest but was using future prices. Always double-check the tradedate offset before trusting any results.
-
-> **Another one to watch:** also got tripped up by a 2-for-1 split on a holding that used raw `close` instead of `adjClose` — y_return showed -49% for that quarter and tanked the model's feature importance for price momentum. Switched to `adjClose` throughout and it resolved immediately.
-
-### 
+> **Personal note:** I got burned by the first mistake early on — spent a whole afternoon debugging why my backtest returns looked too optimistic before realising I was using quarter-end prices instead of tradedate prices. The look-ahead bias was inflating Sharpe by roughly 0.3 across all buckets. Double-check this every time you touch the pipeline.
