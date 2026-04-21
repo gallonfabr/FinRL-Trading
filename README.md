@@ -41,11 +41,11 @@
 > **Useful commands I keep forgetting:**
 > - Sync with upstream: `git fetch upstream && git merge upstream/main`
 > - Run backtest on sample data: `python examples/backtest_demo.py --config configs/sample.yaml`
+> - Run backtest over a custom date range: `python examples/backtest_demo.py --config configs/sample.yaml --start 2022-01-01 --end 2023-12-31`
+> - Check which upstream commits I'm behind: `git log HEAD..upstream/main --oneline`
 
 ## About
 
 **FinRL-X** is a next-generation, **AI-native** quantitative trading infrastructure that redefines how researchers and practitioners build, test, and deploy algorithmic trading strategies. 
 
-Introduced in our paper *"FinRL-X: An AI-Native Modular Infrastructure for Quantitative Trading"* ([arXiv:2603.21330](https://arxiv.org/abs/2603.21330)), FinRL-X succeeds the original [FinRL](https://github.com/AI4Finance-Foundation/FinRL) framework with a fully modernized architecture designed for the LLM and agentic AI era.
-
-> FinRL-X is **not just a library** — it is a full-stack trading platform engineered around modularity, reproducibility, and pr
+Introduced in our paper *"FinRL-X: An AI-Native Modular Infrastructure for Quantitative Trading"* ([arXiv:2603.21330](https://arxiv.org/abs/2603.21330)), FinRL-X succeeds the original [FinRL](https://github.com/AI4Finance-Foundation/FinRL) fram
